@@ -1,16 +1,21 @@
-'use strict';
-
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 
+class Extension {
+
+	constructor() {
+		log(`initializing ${Me.metadata.name} version ${Me.metadata.version}`);
+	}
+
+	enable() {
+		log(`enabling ${Me.metadata.name} version ${Me.metadata.version}`);
+	}
+
+	disable() {
+		log(`disabling ${Me.metadata.name} version ${Me.metadata.version}`);
+	}
+}
+
 function init() {
-	log(`initializing ${Me.metadata.name} version ${Me.metadata.version}`);
-}
-
-function enable() {
-	log(`enabling ${Me.metadata.name} version ${Me.metadata.version}`);
-}
-
-function disable() {
-	log(`disabling ${Me.metadata.name} version ${Me.metadata.version}`);
+	return new Extension();
 }
