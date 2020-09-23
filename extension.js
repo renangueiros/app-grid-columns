@@ -56,6 +56,12 @@ class Extension {
 	}
 
 	_udpateColumns(columns) {
+		Main.overview.viewSelector.appDisplay._views[AppDisplay.Views.ALL].view._grid._colLimit = columns;
+		Main.overview.viewSelector.appDisplay._views[AppDisplay.Views.FREQUENT].view._grid._colLimit = columns;
+
+		Main.overview.viewSelector.appDisplay._views[AppDisplay.Views.ALL].view._redisplay();
+		Main.overview.viewSelector.appDisplay._views[AppDisplay.Views.FREQUENT].view._redisplay();
+
 		log(`Displaying ${columns} columns in the App Grid}`);
 	}
 }
