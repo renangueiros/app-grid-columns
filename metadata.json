@@ -1,0 +1,10 @@
+{
+	"uuid": "app-grid-columns@renangueiros.github.com",
+	"name": "App Grid Columns",
+	"description": "Customize the number of columns displayed in the App Grid",
+	"version": 1,
+	"shell-version": [
+		"3.36"
+	],
+	"url": "https://github.com/renangueiros/app-grid-columns"
+}
